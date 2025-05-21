@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Página de Login</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #4A3428;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+    .login-box {
+      background: rgb(202, 189, 189);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #FBBD3C;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    #mensaje {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Iniciar Sesión</h2>
+    <input type="text" id="usuario" placeholder="Usuario">
+    <input type="password" id="contrasena" placeholder="Contraseña">
+    <button onclick="validarLogin()">Entrar</button>
+    <div id="mensaje"></div>
+  </div>
+
+  <script>
+    function validarLogin() {
+      const usuario = document.getElementById("usuario").value;
+      const contrasena = document.getElementById("contrasena").value;
+      const mensaje = document.getElementById("mensaje");
+
+      // Aquí están las credenciales válidas
+      const usuarioValido = "Britnye Fajardo";
+      const contrasenaValida = "1012318240";
+      const usuariodia = "dia";
+      const contrasenadia= "dia";
+      const usuariodia = "noche";
+      const contrasenadia= "noche";
+
+      // Estructura de control if/else
+      if (usuario === "" || contrasena === "" ) {
+        mensaje.innerText = "Por favor completa todos los campos.";
+        mensaje.style.color = "orange";
+      } 
+      else if (usuario === usuarioValido && contrasena === contrasenaValida) {
+        window.location.href = "Bento%20Grid.html";
+      }
+      else if (usuario === usuarioValido && contrasena === contrasenaValida) {
+        window.location.href = "Bento%20Grid.html";
+      }
+      else {
+        mensaje.innerText = "Usuario o contraseña incorrectos.";
+        mensaje.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
